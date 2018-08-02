@@ -16,7 +16,6 @@ networks:
 volumes:
   vol-nc-db:
   vol-nc-content:
-  vol-nc-data:
 
 # Create our containers.
 services:
@@ -95,7 +94,8 @@ services:
     volumes:
       # Ensure NC content persist between restarts.
       - vol-nc-content:/var/www/html
-      - vol-nc-data:/var/www/html/data
+      # User data stored in separate drive if avavilable otherwise just a folder on the root drive.
+      - /data:/var/www/html/data
       # Install our own php.ini, which can be customized.
       - ./php.ini:/usr/local/etc/php/php.ini
     environment:
