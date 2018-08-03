@@ -7,4 +7,5 @@ Docker, a powerful and standardized way to deploy applications
 Free SSL certificates from Let’s Encrypt (via Traefik)
 phpMyAdmin to easily manage your databases
 Automatic container updates (via Watchtower)
+
 To see how it all works, jump to the Look a bit deeper section of our guide.
