@@ -31,7 +31,7 @@ if [ -b /dev/vdb ] ; then {
    apt-get -y install xfsprogs
    mkfs.xfs /dev/vdb
    mkdir /data
-   echo "dev/vdb  /data  xfs  defaults  0  2" | tee -a /etc/fstab
+   echo "/dev/vdb  /data  xfs  defaults  0  2" | tee -a /etc/fstab
    mount -t xfs /dev/vdb /data
 } else {
    mkdir /data
